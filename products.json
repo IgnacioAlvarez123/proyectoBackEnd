@@ -79,14 +79,5 @@
     "thumbnail": "impresora.jpg",
     "code": "IM010",
     "stock": 20
-  },
-  {
-    "title": "Nuevo Producto",
-    "description": "Descripción del nuevo producto",
-    "price": 99.99,
-    "thumbnail": "nuevo_producto.jpg",
-    "code": "NP001",
-    "stock": 10,
-    "id": 11
   }
 ]
