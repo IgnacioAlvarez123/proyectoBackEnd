@@ -7,7 +7,7 @@ class ProductManager {
 
     async addProduct(product) {
         try {
-            const products = await this.getProductsFromFile();
+            const products = await this.getProducts();
             product.id = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
             products.push(product);
             await this.saveProducts(products);
@@ -22,7 +22,7 @@ class ProductManager {
             const data = fs.readFileSync(this.path, 'utf8');
             return JSON.parse(data);
         } catch (error) {
-            console.log('Error al cargar productos desde archivo:', error.message);
+            console.log('Error al cargar productos desde archivo:');
             return [];
         }
     }
@@ -39,7 +39,7 @@ class ProductManager {
 
     async updateProduct(id, actualizarProductos) {
         try {
-            const products = await this.getProductsFromFile();
+            const products = await this.getProducts();
             const index = products.findIndex(product => product.id === id);
             if (index !== -1) {
                 products[index] = { ...products[index], ...actualizarProductos };
@@ -54,7 +54,7 @@ class ProductManager {
 
     async deleteProduct(id) {
         try {
-            let products = await this.getProductsFromFile();
+            let products = await this.getProducts();
             products = products.filter(product => product.id !== id);
             await this.saveProducts(products);
         } catch (error) {
@@ -62,26 +62,6 @@ class ProductManager {
         }
     }
 
-    async getProductsFromFile(path) {
-        return new Promise((resolve, reject) => {
-            // Leer el archivo
-            fs.readFile(path, (error, data) => {
-                if (error) {
-                    if (error.code === 'ENOENT') {
-                        resolve([]);
-                    } else {
-                        reject(error);
-                    }
-                } else {
-                    try {
-                        resolve(JSON.parse(data));
-                    } catch (parseError) {
-                        reject(new Error('Error al analizar los datos JSON'));
-                    }
-                }
-            });
-        });
-    }
 
     async saveProducts(products) {
         return new Promise((resolve, reject) => {

@@ -4,7 +4,8 @@
     "title": "Silla de Oficina Ergonómica",
     "description": "Silla de oficina con soporte lumbar ajustable",
     "price": 149.99,
-    "thumbnail": "silla_oficina.jpg",
+    "status": true,
+    "category": "mueble",
     "code": "SO001",
     "stock": 30
   },
@@ -13,7 +14,8 @@
     "title": "Set de Herramientas de Mano",
     "description": "Kit de herramientas para bricolaje doméstico",
     "price": 89.99,
-    "thumbnail": "herramientas.jpg",
+    "status": true,
+    "category": "otros",
     "code": "HM002",
     "stock": 25
   },
@@ -22,7 +24,8 @@
     "title": "Cafetera de Goteo Programable",
     "description": "Cafetera con temporizador y capacidad para 12 tazas",
     "price": 39.99,
-    "thumbnail": "cafetera.jpg",
+    "status": true,
+    "category": "tecnologia",
     "code": "CG003",
     "stock": 20
   },
@@ -31,7 +34,8 @@
     "title": "Mochila Impermeable para Senderismo",
     "description": "Mochila con capacidad de 40 litros y cubierta impermeable",
     "price": 69.99,
-    "thumbnail": "mochila.jpg",
+    "status": true,
+    "category": "otros",
     "code": "MS004",
     "stock": 15
   },
@@ -40,7 +44,8 @@
     "title": "Auriculares Bluetooth Deportivos",
     "description": "Auriculares inalámbricos para deportes con cancelación de ruido",
     "price": 29.99,
-    "thumbnail": "auriculares.jpg",
+    "status": true,
+    "category": "tecnologia",
     "code": "AB006",
     "stock": 35
   },
@@ -49,7 +54,8 @@
     "title": "Batería Externa Portátil",
     "description": "Cargador portátil de 20000mAh con doble puerto USB",
     "price": 24.99,
-    "thumbnail": "bateria_externa.jpg",
+    "status": true,
+    "category": "tecnologia",
     "code": "BE007",
     "stock": 40
   },
@@ -58,7 +64,8 @@
     "title": "Robot Aspirador Inteligente",
     "description": "Aspiradora robótica con navegación inteligente y control por voz",
     "price": 199.99,
-    "thumbnail": "aspiradora.jpg",
+    "status": true,
+    "category": "tecnologia",
     "code": "RA008",
     "stock": 10
   },
@@ -67,7 +74,8 @@
     "title": "Teclado Mecánico para Gaming",
     "description": "Teclado retroiluminado con interruptores mecánicos y reposamuñecas",
     "price": 89.99,
-    "thumbnail": "teclado.jpg",
+    "status": true,
+    "category": "tecnologia",
     "code": "TM009",
     "stock": 15
   },
@@ -76,7 +84,8 @@
     "title": "Impresora Multifuncional WiFi",
     "description": "Impresora todo-en-uno con conexión inalámbrica y escáner automático",
     "price": 129.99,
-    "thumbnail": "impresora.jpg",
+    "status": true,
+    "category": "tecnologia",
     "code": "IM010",
     "stock": 20
   }
