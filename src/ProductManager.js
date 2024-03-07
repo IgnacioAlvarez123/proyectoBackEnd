@@ -5,7 +5,7 @@ class ProductManager {
         this.path = filePath;
     }
 
-    async addProduct(product) {
+    async addProduct(product, io) {
         try {
             const products = await this.getProducts();
             product.id = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
@@ -15,6 +15,7 @@ class ProductManager {
         } catch (error) {
             throw new Error("Error agregando producto");
         }
+        io.emit('productAdded', newProduct);
     }
 
     getProducts() {
@@ -52,7 +53,7 @@ class ProductManager {
         }
     }
 
-    async deleteProduct(id) {
+    async deleteProduct(id, io) {
         try {
             let products = await this.getProducts();
             products = products.filter(product => product.id !== id);
@@ -60,6 +61,7 @@ class ProductManager {
         } catch (error) {
             throw new Error("Error eliminando el producto: ");
         }
+        io.emit('productDeleted', id);
     }
 
 

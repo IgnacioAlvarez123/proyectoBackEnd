@@ -1,15 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Silla de Oficina Ergonómica",
-    "description": "Silla de oficina con soporte lumbar ajustable",
-    "price": 149.99,
-    "status": true,
-    "category": "mueble",
-    "code": "SO001",
-    "stock": 30
-  },
-  {
     "id": 2,
     "title": "Set de Herramientas de Mano",
     "description": "Kit de herramientas para bricolaje doméstico",
